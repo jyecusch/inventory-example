@@ -4,12 +4,13 @@ import { topic, faas, api, bucket, events, collection, Topic } from "@nitric/sdk
 export const products = collection("products").for("writing", "reading");
 
 // API
-export const inventoryApi = api("inventory");
+export const inventoryApi = api("inv");
 
 // Topics
-export const inventoryPub = topic('inventory').for('publishing');
+export const inventorySub = topic('updates')
 
-export const inventorySub = topic('inventory')
+export const inventoryPub = inventorySub.for('publishing');
+
 
 // Buckets
 export const imageBucket = bucket('images').for('reading', 'writing');

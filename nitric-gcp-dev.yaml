@@ -1,0 +1,4 @@
+name: gcp-dev
+provider: gcp
+region: us-west2
+project: outstanding-box-295102
